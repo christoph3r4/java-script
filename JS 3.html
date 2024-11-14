@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS3</title>
+</head>
+<body>
+
+    <h1> JS3 </h1>
+
+<div class="testo">
+
+    <p id="testo1">“Fino a oggi la maggior parte degli scienziati è 
+        stata troppo occupata nello sviluppo di nuove teorie che descrivono
+         che cosa sia l'universo per porsi la domanda perché?” Stephen Hawking</p> 
+  <button onclick="nascondiTesto('testo1')">Nascondi Testo</button> 
+
+
+</div>  
+   
+ 
+
+<div class="testo">
+
+    <p id="testo2">“Se verrà dimostrato che la mia teoria della relatività è valida,<br>
+         la Germania dirà che sono tedesco e la Francia
+          che sono cittadino del mondo.
+          Se la mia teoria dovesse essere sbagliata,
+           la Francia dirà che sono un tedesco 
+          e la Germania che sono un ebreo.” Albert Einstein</p> 
+    <button onclick="nascondiTesto('testo2')">Nascondi Testo</button> 
+    
+
+</div>
+
+
+<div class="testo">
+
+    <p id="testo3">“Quando uno scienziato importante ma anziano afferma
+         che qualcosa è possibile, ha quasi sempre ragione. <br>
+         Quando dice di qualcosa che è impossibile, con ogni probabilità si sta sbagliando.
+          L’unico modo per scoprire i limiti del possibile sta nell’andare un po’ oltre<br>
+           e avventurarsi nell’impossibile. Ogni tecnologia abbastanza progredita
+            è indistinguibile dalla magia.” Michio Kaku</p> 
+    <button onclick="nascondiTesto('testo3')">Nascondi Testo</button> 
+    
+
+</div>
+
+
+
+<div class="testo">
+
+    <p id="testo4">“Lo scienziato nel suo laboratorio non è solo un tecnico, 
+        è anche un bambino davanti a fenomeni della Natura che lo affascinano
+         come un racconto di fate.” Marie Curie</p> 
+    <button onclick="nascondiTesto('testo4')">Nascondi Testo</button> 
+    
+
+</div>
+
+
+<div class="testo">
+
+    <p id="testo5">“Qualsiasi marmocchio può uccidere una pulce: 
+        tutti gli studiosi delle accademie del mondo non sono in grado di crearne una.
+        ” Albert Einstein</p> 
+    <button onclick="nascondiTesto('testo5')">Nascondi Testo</button> 
+    
+
+</div>
+
+
+  
+
+<script>
+function nascondiTesto(id) 
+{
+const testo = document.getElementById(id);
+testo.style.display = "none"; 
+// Nasconde il testo impostando display a 'none'
+} 
+</script>
+
+
+
+
+</body>
+</html>
