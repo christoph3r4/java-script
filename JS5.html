@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcola il dislivello</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #container1 {
+            padding: 20px;
+            border: 1px solid black;
+            background-color: darkblue;
+            background-size: cover;
+            color: white;
+            margin: 50px auto;
+            height: 600px; 
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        #container2 {
+            padding: 20px;
+            border: 1px solid black;
+            background-color: darkblue;
+            background-size: cover;
+            color: white;
+            margin: 50px auto;
+            height: 400px; 
+            text-align: center;  
+            border-radius: 10px;
+            width: 500px;
+        }
+
+        input {
+         
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            background-color: #3e8e41;
+        }
+
+        #out1 {
+            margin-top: 20px;
+        }
+
+    </style>
+    </head>
+    <body>
+
+    <div id="container1">
+
+        <h2>Calcola il dislivello</h2>
+        <p>Inserisci i dati nella tabella e premi il tasto "Calcola dislivello"</p>
+        <p><label for="partenza">Partenza (m) </label></p>
+        <input id="partenza" type="number">
+        <p><label for="pausa">Pausa trekking (min)</label></p>
+        <input id="pausa" type="number">
+        <p><label for="arrivo">Arrivo (m) </label></p>
+        <input id="arrivo" type="number">
+        <p></p>
+        <button onclick="calcola1()">Calcola dislivello</button>
+        <p id="out1"></p>
+
+    </div>
+
+    <div id="container2">
+
+        <h2>Calcola l'orario</h2>
+        <p>Inserisci i dati nella tabella e premi il tasto "Calcola tempo"</p>
+        <p><label for="partenza">orario di partenza (h)  </label></p>
+        <input id="ora1" type="number"> : <input id="min1" type="number">
+        <p><label for="arrivo">orario di arrivo (h)  </label></p>
+        <input id="ora2" type="number"> : <input id="min2" type="number">
+        <button onclick="calcola2()">Calcola la percorrenza</button>
+        <p id="out2">ciao</p>
+
+    </div>
+
+    <script>
+
+        function calcola1() 
+         {
+            let i1 = parseInt(document.getElementById("partenza").value);
+            let i2 = parseInt(document.getElementById("pausa").value);
+            let i3 = parseInt(document.getElementById("arrivo").value);
+            let risultato = i3 - i1;
+            document.getElementById("out1").innerHTML = "Il dislivello totale è: " + risultato + " metri.";
+        }
+
+    
+
+
+
+    function calcola2() 
+        {
+        let i1 = parseInt(document.getElementById("ora1").value);
+        let i2 = parseInt(document.getElementById("min1").value);
+        let i3 = parseInt(document.getElementById("ora2").value);
+        let i4 = parseInt(document.getElementById("min2").value);
+        let risultato=calcolaDifferenza(i1,i2,i3,i4)
+
+        document.getElementById("out2").innerHTML=risultato;
+    }
+
+     // Funzione per calcolare la differenza in minuti
+  function    calcolaDifferenza(ora1, minuto1, ora2, minuto2)
+{
+    // Converti entrambe le ore e i minuti in minuti totali
+    const minutiTotali1 = (ora1 * 60) + minuto1;
+    const minutiTotali2 = (ora2 * 60) + minuto2;
+    
+    // Calcola la differenza in valore assoluto
+    const differenza = Math.abs(minutiTotali1 - minutiTotali2);
+
+    return differenza;
+}
+
+</script>
+</body>
+</html>
