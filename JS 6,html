@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selezione</title>
+
+
+    <style>
+
+#miobotton1 {
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #04AA6D;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        }
+
+        #miobotton1:hover {background-color: #3e8e41}
+
+        #miobotton1:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1> Selezione </h1>
+
+    <p>La selezione o anche detta se condizionale
+    è un operazione che controlla un test di tipo booleano
+    (cioe se un espressione da vero o falso)<br>
+   
+    Se il test è vero  eseguo una sequenza di istruzioni
+    Se il test è falso eseguo un'altra sequenza di istruzioni<br>
+    
+    <p></p>
+
+    Attenzione esempio<br>
+<p></p>
+    if(TEST)    restituisce o vero o falso
+    {
+        1 costrutto
+        se test == true eseguo il primo costrutto di istruzioni
+        all'interno delle prime parentesi graffe
+    }
+
+    <p></p>
+
+
+
+    else   (altrimenti)
+    {
+        2 costrutto
+        se test == false eseguo il secondo costrutto di istruzioni
+        all'interno delle prime parentesi graffe
+
+    }
+
+    </p>
+
+    <button id="miobotton1" onclick="inputNumero()"> Inserisci la tua età</button>
+
+<script>
+
+    function inputNumero(){
+
+       let numero = prompt("Inserisci la tua eta ");
+       numero=Number(numero);
+
+        //controlliamo se il numero è > 0
+
+        if (numero>0)
+
+        {
+            alert("il numero è valido")
+
+        }
+
+        else
+
+        {
+            alert("Attenzione il numero deve essere >0")
+
+        }
+    }
+
+
+
+</script>
+
+
+
+   
+</body>
+</html>
