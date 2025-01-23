@@ -1,116 +1,170 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> leggi di ohm </title> 
-
+    <title>Legge di Ohm</title>
     <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
+        .flip-card {
+            background-color: transparent;
+            width: 1000px;
+            height: 650px;
+            perspective: 1000px;
+            margin: 20px auto;
+        }
 
-.flip-card {
-  background-color: transparent;
-  width: 1400px;
-  height: 800px;
-  perspective: 1000px;
-  margin: 20px auto ;
-}
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
- 
-}
+        .flip-card-front {
+            background-color: darkblue;
+            color: white;
+        }
 
-.flip-card-front {
-  background-color: darkblue;
-  color: white;
-  padding: 5px;
-  
-}
+        .flip-card-back {
+            background-color: darkblue;
+            color: white;
+            transform: rotateY(180deg);
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-.flip-card-back {
-  background-color: darkblue;
-  color: white;
-  transform: rotateY(180deg);
-  width: px;
-  margin: 20px auto ;
+        #valori {
+            margin-top: 20px;
+        }
 
-  
-}
-</style>
+        input {
+            margin: 5px;
+            padding: 10px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
 
-<h1>  Leggi di ohm.  </h1>   
-
-<h2>Passa con il mouse sopra il testo per vedere la mappa concettuale. </h2>
+<h1>Legge di Ohm</h1>
+<p>
+    La prima legge definisce la relazione tra resistenza (r), corrente (i) e tensione (V), con la formula 
+    V= R ⋅ i , indicando proporzionalità diretta tra tensione e corrente, e inversa rispetto alla resistenza. 
+    La seconda legge riguarda la resistenza (R) in un conduttore, data da 
+    R = 𝜌 ⋅ L/S dove 𝜌 è la resistività, 𝐿 la lunghezza e S la sezione del conduttore.
+    La resistenza è direttamente proporzionale alla lunghezza e inversamente proporzionale alla sezione. 
+    La resistività (ρ) è paragonata alla forza applicata all’acqua in un tubo.
+    
+</p>
 
 <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-
-
-      <h1> Leggi di ohm </h1> 
-
-      <p>
-
-        La prima legge definisce la relazione tra resistenza (r), corrente (i) e tensione (V), con la formula 
-        V= R ⋅ i , indicando proporzionalità diretta tra tensione e corrente, e inversa rispetto alla resistenza. 
-        La seconda legge riguarda la resistenza (R) in un conduttore, data da 
-        R = 𝜌 ⋅ L/S dove 𝜌 è la resistività, 𝐿 la lunghezza e S la sezione del conduttore.
-        La resistenza è direttamente proporzionale alla lunghezza e inversamente proporzionale alla sezione. 
-        La resistività (ρ) è paragonata alla forza applicata all’acqua in un tubo.
-        
-        </p>
-      
-        <h1> Biografia ohm </h1>
-
-        <p>
-
-            Georg Simon Ohm è stato un fisico e matematico tedesco, nato il 16 marzo 1789 a Erlangen e morto il 6 luglio 1854 a Monaco di Baviera. 
-            È noto per aver scoperto la legge che porta il suo nome, che descrive la relazione tra tensione, corrente e resistenza in un circuito elettrico. 
-            Ohm ha anche scoperto che la resistenza di un conduttore è direttamente proporzionale alla sua lunghezza e inversamente proporzionale alla sua sezione trasversale. 
-            Questa scoperta ha portato alla definizione della resistività, una costante che dipende dal materiale di cui è fatto il conduttore. 
-            Ohm ha pubblicato i suoi risultati nel 1827 nel libro "Die galvanische Kette, mathematisch bearbeitet" (La catena galvanica, trattata matematicamente). 
-            La legge di Ohm è stata confermata sperimentalmente da Gustav Kirchhoff nel 1845. 
-
-
-        </p>
-   
-
-        <img src="george.jpeg" alt="ohm" width="" height="400px">
-
-      </div>
-
-    <div class="flip-card-back">
-
-      <img src="fotomappa.jpg" alt="ohm" width="100%" height="100%">
-
-    
-  </div>
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="fotomappa.jpg" alt="Mappa concettuale" width="100%" height="100%">
+        </div>
+        <div class="flip-card-back">
+            <h1>Biografia di Ohm</h1>
+            <p>
+                Georg Simon Ohm è stato un fisico e matematico tedesco, nato il 16 marzo 1789 a Erlangen e morto il 6 luglio 1854 a Monaco di Baviera. 
+                È noto per aver scoperto la legge che porta il suo nome, che descrive la relazione tra tensione, corrente e resistenza in un circuito elettrico. 
+                Ohm ha anche scoperto che la resistenza di un conduttore è direttamente proporzionale alla sua lunghezza e inversamente proporzionale alla sua sezione trasversale. 
+                Questa scoperta ha portato alla definizione della resistività, una costante che dipende dal materiale di cui è fatto il conduttore. 
+                Ohm ha pubblicato i suoi risultati nel 1827 nel libro "Die galvanische Kette, mathematisch bearbeitet" (La catena galvanica, trattata matematicamente). 
+                La legge di Ohm è stata confermata sperimentalmente da Gustav Kirchhoff nel 1845.
+            </p>
+            <img src="george.jpeg" alt="Ohm" width="" height="400px">
+        </div>
+    </div>
 </div>
-</body>
 
+<br>
+
+<div id="valori">
+    <h1>Prova le formule:</h1>
+    <input id="valore1" placeholder="Inserisci il primo valore"><br>
+    <input id="valore2" placeholder="Inserisci il secondo valore"><br>
+    <select id="calcolo">
+        <option value="V">Calcola V (Tensione)</option>
+        <option value="I">Calcola I (Corrente)</option>
+        <option value="R">Calcola R (Resistenza)</option>
+    </select><br>
+    <button onclick="calcola()">Calcola</button>
+</div>
+
+<div id="output"></div>
+
+<br>
+
+<h3>Video spiegazione</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4YlCsEnm4E0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QHifiMuHFBg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h4>Sitografia</h4>
+<ul>
+    <li><a href="https://it.wikipedia.org/wiki/Georg_Simon_Ohm">Wikipedia - Georg Simon Ohm</a></li>
+    <li><a href="https://it.wikipedia.org/wiki/Legge_di_Ohm">Wikipedia - Legge di Ohm</a></li>
+</ul>
+
+<script>
+    function calcola() {
+        let valore1 = document.getElementById("valore1").value;
+        let valore2 = document.getElementById("valore2").value;
+        let calcolo = document.getElementById("calcolo").value;
+        let risultato;
+
+        if (calcolo == "V") {
+            risultato = valore1 * valore2;
+            document.getElementById("output").innerText = "Il voltaggio (V) è: " + risultato + " Volt";
+        } else if (calcolo == "I") {
+            risultato = valore1 / valore2;
+            document.getElementById("output").innerText = "L'intensità di corrente (I) è: " + risultato + " Ampere";
+        } else if (calcolo == "R") {
+            risultato = valore1 / valore2;
+            document.getElementById("output").innerText = "La resistenza (R) è: " + risultato + " Ohm";
+        } else {
+            document.getElementById("output").innerText = "Seleziona un calcolo valido (V, I o R).";
+        }
+    }
+</script>
+
+</body>
+</html>
